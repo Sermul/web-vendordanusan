@@ -21,7 +21,7 @@ export default function CategorySection({ title, slug, vendors }: Props) {
           {title}
         </h2>
 
-   <Link href={`/kategori/${slug}`}>
+ <Link href={`/vendor?kategori=${slug}`}>
   Lihat Lainnya
 </Link>
       </div>

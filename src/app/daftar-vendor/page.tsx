@@ -9,7 +9,15 @@ export default function DaftarVendor() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("Semua");
 
-  const categories = ["Semua", "Makanan", "Minuman", "Snack"];
+  const categories = [
+    "Semua",
+    "Makanan",
+    "Minuman",
+    "Snack",
+    "Merchandise",
+    "Dokumentasi",
+    "Perlengkapan",
+  ];
 
   const filtered = dummyVendors.filter((vendor) => {
     const matchSearch = vendor.name
@@ -17,7 +25,8 @@ export default function DaftarVendor() {
       .includes(search.toLowerCase());
 
     const matchCategory =
-      category === "Semua" || vendor.category === category;
+      category === "Semua" ||
+      vendor.category.toLowerCase() === category.toLowerCase();
 
     return matchSearch && matchCategory;
   });
@@ -53,13 +62,14 @@ export default function DaftarVendor() {
           <VendorCard key={vendor.id} vendor={vendor} />
         ))}
       </div>
+
       {/* EMPTY STATE */}
-{filtered.length === 0 && (
-  <div className="text-center py-20 text-gray-500">
-    <p className="text-xl mb-2">😢 Vendor tidak ditemukan</p>
-    <p>Coba kata kunci lain</p>
-  </div>
-)}
+      {filtered.length === 0 && (
+        <div className="text-center py-20 text-gray-500">
+          <p className="text-xl mb-2">😢 Vendor tidak ditemukan</p>
+          <p>Coba kata kunci lain</p>
+        </div>
+      )}
     </section>
   );
 }
