@@ -8,7 +8,7 @@ import FloatingButtons from "../components/FloatingButtons";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Danusan Mahasiswa",
+  title: "VenKampus",
   description: "Platform cari vendor danusan kampus",
 };
 
@@ -24,8 +24,8 @@ export default function RootLayout({
         <header className="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <Link href="/" className="text-2xl font-bold">
-             <span className="text-primary">Danusan</span>
-              <span className="text-gray-900">Mahasiswa</span>
+             <span className="text-primary">Ven</span>
+              <span className="text-gray-900">Kampus</span>
             </Link>
 
            <nav className="hidden md:flex gap-8 text-gray-600 items-center">

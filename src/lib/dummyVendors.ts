@@ -20,6 +20,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.8,
     distance: "0.8 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   {
@@ -36,6 +38,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.7,
     distance: "1.2 km",
       discount: true, 
+      lat: -7.27,
+lng: 112.78,
   },
 
   /* =========================
@@ -56,6 +60,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.7,
     distance: "1 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   {
@@ -72,6 +78,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.9,
     distance: "2 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   /* =========================
@@ -92,6 +100,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.9,
     distance: "0.5 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   {
@@ -108,6 +118,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.8,
     distance: "1.5 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   /* =========================
@@ -128,6 +140,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.6,
     distance: "2 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   {
@@ -144,6 +158,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.7,
     distance: "3 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   /* =========================
@@ -164,6 +180,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.9,
     distance: "3 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   {
@@ -180,6 +198,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.8,
     distance: "4 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   /* =========================
@@ -200,6 +220,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.8,
     distance: "4 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 
   {
@@ -216,6 +238,8 @@ export const dummyVendors: Vendor[] = [
     rating: 4.9,
     distance: "5 km",
      discount: true, 
+     lat: -7.27,
+lng: 112.78,
   },
 ]
 

@@ -29,8 +29,8 @@ export default function MapView({ vendors }: MapViewProps) {
   return (
     <div className="w-full h-[500px] rounded-xl overflow-hidden border border-gray-200 shadow-xl">
       <MapContainer
-        center={[-6.2, 106.8]}  // pusat Indonesia contoh
-        zoom={5}
+       center={[-7.2696, 112.7805]}
+zoom={14}
         style={{ height: '100%', width: '100%' }}
       >
         <TileLayer

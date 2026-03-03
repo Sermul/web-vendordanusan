@@ -2,95 +2,191 @@ export default function TentangPage() {
   return (
     <div className="relative overflow-hidden bg-neutralbg text-darktext">
 
-      {/* FLOATING BACKGROUND BLUR */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute top-60 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
+      {/* ================= HERO WITH VIDEO ================= */}
+      <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
 
-      {/* HERO */}
-      <section className="relative py-32 px-6 text-center">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary to-indigo-500 text-transparent bg-clip-text animate-fadeIn">
-          Tentang Danusan Mahasiswa
-        </h1>
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="/video-event.mp4" type="video/mp4" />
+        </video>
 
-        <p className="max-w-2xl mx-auto text-lg text-gray-600 animate-fadeIn delay-200">
-          Platform digital yang membantu mahasiswa menemukan vendor danusan terpercaya 
-          dengan cepat, transparan, dan tanpa ribet.
-        </p>
-      </section>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* MARQUEE TEXT */}
-     <div className="overflow-hidden bg-primary text-white py-4">
-  <div className="marquee whitespace-nowrap text-2xl font-semibold">
-    INOVATIF • TERPERCAYA • PROFESIONAL • CEPAT • BERKUALITAS • 
-    INOVATIF • TERPERCAYA • PROFESIONAL • CEPAT • BERKUALITAS • 
-  </div>
-</div>
+        <div className="relative z-10 text-white px-6">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+            Platform Vendor & Dana Usaha Mahasiswa
+          </h1>
 
-      {/* KOTAK KEUNGGULAN */}
-      <section className="max-w-6xl mx-auto py-24 px-6 grid md:grid-cols-3 gap-10">
+          <p className="max-w-2xl mx-auto text-lg opacity-90 mb-10">
+            Temukan vendor terpercaya untuk event kampus, merchandise,
+            dokumentasi, dan kebutuhan dana usaha dalam satu platform modern.
+          </p>
 
-        {[
-          {
-            title: "Vendor Terverifikasi",
-            desc: "Semua vendor melalui proses kurasi untuk memastikan kualitas terbaik."
-          },
-          {
-            title: "Harga Transparan",
-            desc: "Tidak ada biaya tersembunyi, semua informasi jelas dan terbuka."
-          },
-          {
-            title: "Proses Super Cepat",
-            desc: "Temukan vendor hanya dalam beberapa klik tanpa ribet."
-          }
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="group relative p-10 rounded-3xl bg-white shadow-md hover:shadow-2xl hover:-translate-y-4 transition duration-500 overflow-hidden"
+          <a
+            href="/"
+            className="bg-primary px-8 py-4 rounded-full font-semibold hover:scale-110 transition"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-
-            <h3 className="text-xl font-bold mb-4 text-primary relative z-10">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 relative z-10">
-              {item.desc}
-            </p>
-          </div>
-        ))}
+            Jelajahi Vendor
+          </a>
+        </div>
       </section>
 
-      {/* STORY SECTION */}
-      <section className="bg-white py-24 px-6 text-center">
-        <h2 className="text-4xl font-bold text-primary mb-6">
-          Kenapa Kami Membuat Ini?
+      {/* ================= STATISTIK ================= */}
+      <section className="py-20 bg-white text-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+          <div>
+            <h3 className="text-4xl font-bold text-primary">150+</h3>
+            <p className="text-gray-600 mt-2">Vendor Terdaftar</p>
+          </div>
+
+          <div>
+            <h3 className="text-4xl font-bold text-primary">500+</h3>
+            <p className="text-gray-600 mt-2">Event Terbantu</p>
+          </div>
+
+          <div>
+            <h3 className="text-4xl font-bold text-primary">1000+</h3>
+            <p className="text-gray-600 mt-2">Mahasiswa Terhubung</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= KATEGORI ================= */}
+      <section className="py-24 px-6 bg-gray-50">
+        <h2 className="text-4xl font-bold text-center text-primary mb-16">
+          Kategori Vendor
         </h2>
 
-        <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-          Kami melihat banyak organisasi mahasiswa kesulitan mencari vendor untuk acara kampus.
-          Informasi tersebar, harga tidak jelas, dan proses memakan waktu.
-          Danusan Mahasiswa hadir untuk menyederhanakan semuanya dalam satu platform.
-        </p>
+        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+          {[
+            "Merchandise",
+            "Dokumentasi",
+            "Danusan",
+            "Perlengkapan Event"
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="p-10 rounded-3xl bg-white shadow-md hover:shadow-xl hover:-translate-y-4 transition duration-500 text-center"
+            >
+              <h3 className="font-semibold text-lg text-primary">
+                {item}
+              </h3>
+            </div>
+          ))}
+
+        </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-28 text-center bg-gradient-to-r from-primary to-indigo-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,white,transparent)]"></div>
+      {/* ================= CARA KERJA ================= */}
+      <section className="py-24 px-6 bg-white text-center">
+        <h2 className="text-4xl font-bold text-primary mb-16">
+          Cara Kerja Platform
+        </h2>
 
+        <div className="grid md:grid-cols-4 gap-10 max-w-6xl mx-auto">
+
+          {[
+            "Cari Vendor",
+            "Bandingkan Harga",
+            "Hubungi Langsung",
+            "Event Sukses"
+          ].map((step, i) => (
+            <div key={i} className="p-8">
+              <div className="text-4xl font-bold text-primary mb-4">
+                0{i + 1}
+              </div>
+              <p className="font-semibold text-gray-700">
+                {step}
+              </p>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* ================= VISI MISI ================= */}
+      <section className="max-w-6xl mx-auto py-24 px-6 grid md:grid-cols-2 gap-16">
+
+        <div>
+          <h2 className="text-3xl font-bold text-primary mb-6">
+            Visi Kami
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Menjadi platform utama mahasiswa dalam menemukan vendor
+            terpercaya untuk kebutuhan event dan dana usaha kampus.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold text-primary mb-6">
+            Misi Kami
+          </h2>
+          <ul className="text-gray-600 space-y-3">
+            <li>✔ Menghubungkan mahasiswa dengan vendor terpercaya</li>
+            <li>✔ Memberikan transparansi harga</li>
+            <li>✔ Mempermudah pencarian vendor</li>
+            <li>✔ Mendukung kesuksesan event kampus</li>
+          </ul>
+        </div>
+
+      </section>
+
+      {/* ================= TESTIMONI ================= */}
+      <section className="py-24 bg-gray-50 text-center px-6">
+        <h2 className="text-4xl font-bold text-primary mb-16">
+          Apa Kata Mereka?
+        </h2>
+
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+
+          <div className="bg-white p-10 rounded-3xl shadow-md">
+            <p className="text-gray-600 mb-4">
+              "Platform ini sangat membantu acara himpunan kami.
+              Vendor cepat dihubungi dan harga transparan."
+            </p>
+            <h4 className="font-semibold text-primary">
+              Ketua BEM Fakultas
+            </h4>
+          </div>
+
+          <div className="bg-white p-10 rounded-3xl shadow-md">
+            <p className="text-gray-600 mb-4">
+              "Sekarang cari vendor danusan jadi jauh lebih mudah.
+              Tidak perlu tanya satu per satu lagi."
+            </p>
+            <h4 className="font-semibold text-primary">
+              Panitia PKKMB
+            </h4>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= CTA FINAL ================= */}
+      <section className="py-28 text-center bg-gradient-to-r from-primary to-indigo-600 text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Siap Memulai Danusan Kamu?
+          Siap Membuat Event Kampus Lebih Mudah?
         </h2>
 
         <p className="mb-10 text-lg opacity-90">
-          Jelajahi vendor terbaik dan buat acara kampusmu lebih mudah & sukses.
+          Temukan vendor terbaik dan wujudkan acara organisasi yang lebih profesional.
         </p>
 
         <a
-          href="/daftar-vendor"
+          href="/"
           className="bg-white text-primary font-semibold px-10 py-4 rounded-full hover:scale-110 transition duration-300 inline-block"
         >
-          Jelajahi Vendor
+          Jelajahi Vendor Sekarang
         </a>
       </section>
+
     </div>
   );
 }

@@ -18,4 +18,6 @@ export type Vendor = {
   rating: number
   distance: string
   discount?: boolean; 
+  lat: number
+lng: number
 }
