@@ -2,7 +2,12 @@ import { dummyVendors } from "@/lib/dummyVendors";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
-export default function VendorDetail({ params }: any) {
+export default function VendorDetail({
+  params,
+}: {
+  params: { slug: string };
+}) {
+
   const vendor = dummyVendors.find(
     (v) => v.slug === params.slug
   );

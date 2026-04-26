@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
 import FloatingButtons from "../components/FloatingButtons";
 const inter = Inter({ subsets: ["latin"] });
-
+import "swiper/css"
 export const metadata: Metadata = {
   title: "VenKampus",
   description: "Platform cari vendor danusan kampus",

@@ -14,6 +14,7 @@ const categories = [
 ]
 
 export default function Home() {
+  const discountVendors = dummyVendors.filter(v => v.discount)
   const featuredVendor = dummyVendors[0]
 
   return (
@@ -85,57 +86,99 @@ export default function Home() {
             Kenapa Mahasiswa Pilih Platform Ini?
           </h2>
 
-          <div className="grid md:grid-cols-4 gap-10">
-            <div>
-              <h3 className="font-semibold mb-3 text-lg">✔ Vendor Terverifikasi</h3>
-              <p className="text-gray-600 text-sm">
-                Vendor telah melalui proses seleksi untuk menjamin kualitas dan profesionalitas.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-3 text-lg">📍 Sekitar Kampus</h3>
-              <p className="text-gray-600 text-sm">
-                Fokus vendor di area kampus agar mudah diakses dan cepat dihubungi.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-3 text-lg">💰 Harga Mahasiswa</h3>
-              <p className="text-gray-600 text-sm">
-                Paket khusus organisasi dan pembelian dalam jumlah besar.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-3 text-lg">⚡ Terhubung Langsung</h3>
-              <p className="text-gray-600 text-sm">
-                Langsung chat vendor via WhatsApp tanpa ribet.
-              </p>
-            </div>
-          </div>
+          <div className="grid md:grid-cols-4 gap-6">
+
+  {/* CARD 1 */}
+  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
+    <img 
+      src="/vendor.png" 
+      alt="Vendor"
+      className="w-full h-40 object-cover rounded-xl mb-4"
+    />
+    <h3 className="text-lg font-semibold">Vendor Terverifikasi</h3>
+    <p className="text-sm text-gray-600">
+      Vendor telah melalui proses seleksi untuk menjamin kualitas dan profesionalitas.
+    </p>
+  </div>
+
+  {/* CARD 2 */}
+  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
+    <img 
+      src="/kampus.png" 
+      alt="Kampus"
+      className="w-full h-40 object-cover rounded-xl mb-4"
+    />
+    <h3 className="text-lg font-semibold">Sekitar Kampus</h3>
+    <p className="text-sm text-gray-600">
+      Fokus vendor di area kampus agar mudah diakses dan cepat dihubungi.
+    </p>
+  </div>
+
+  {/* CARD 3 */}
+  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
+    <img 
+      src="/harga.png" 
+      alt="Harga"
+      className="w-full h-40 object-cover rounded-xl mb-4"
+    />
+    <h3 className="text-lg font-semibold">Harga Mahasiswa</h3>
+    <p className="text-sm text-gray-600">
+      Paket khusus organisasi dan pembelian dalam jumlah besar.
+    </p>
+  </div>
+
+  {/* CARD 4 */}
+  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
+    <img 
+      src="/wa.png" 
+      alt="WA"
+      className="w-full h-40 object-cover rounded-xl mb-4"
+    />
+    <h3 className="text-lg font-semibold">Terhubung Langsung</h3>
+    <p className="text-sm text-gray-600">
+      Langsung chat vendor via WhatsApp tanpa ribet.
+    </p>
+  </div>
+
+</div>
         </div>
       </section>
 
-      {/* ================= FEATURED VENDOR ================= */}
-      <section className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-10 text-center">
-          Vendor Pilihan Minggu Ini
-        </h2>
+     {/* ================= FEATURED VENDOR ================= */}
+<section className="max-w-6xl mx-auto px-6">
+  <h2 className="text-3xl font-bold mb-10 text-center">
+    Vendor Pilihan Minggu Ini
+  </h2>
 
-        <div className="bg-white rounded-2xl shadow-xl p-10 text-center hover:shadow-2xl transition">
-          <h3 className="text-2xl font-bold mb-3">
-            {featuredVendor.name}
-          </h3>
-          <p className="text-gray-600 mb-6">
-            {featuredVendor.description}
-          </p>
-          <Link
-            href={`/vendor/${featuredVendor.slug}`}
-            className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
-          >
-            Lihat Detail
-          </Link>
-        </div>
-      </section>
+  <div className="relative">
 
+    {/* Card */}
+    <div className="bg-white rounded-2xl shadow-xl p-10 text-center hover:shadow-2xl transition">
+      <h3 className="text-2xl font-bold mb-3">
+        {featuredVendor.name}
+      </h3>
+      <p className="text-gray-600 mb-6">
+        {featuredVendor.description}
+      </p>
+      <Link
+        href={`/vendor/${featuredVendor.slug}`}
+        className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition"
+      >
+        Lihat Detail
+      </Link>
+    </div>
+
+    {/* Karakter duduk di pinggir bawah kanan card */}
+    <div className="hidden md:block animate-float absolute -bottom-16 right-6">
+      <img
+        src="/student-character.png"
+        alt="Student Character"
+        className="w-72 h-72 object-contain"
+      />
+    </div>
+
+  </div>
+</section>
       {/* ================= KATEGORI ================= */}
       <div id="kategori" className="max-w-7xl mx-auto px-6 space-y-24">
         {categories.map((cat, index) => {
@@ -150,7 +193,9 @@ export default function Home() {
                 slug={cat.slug}
                 vendors={filtered}
               />
-              {index === 0 && <DiscountSection />}
+             {index === 0 && (
+  <DiscountSection vendors={discountVendors} />
+)}
             </div>
           )
         })}
