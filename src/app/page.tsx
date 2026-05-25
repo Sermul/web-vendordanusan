@@ -87,60 +87,75 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-4 gap-6">
+            <div className="relative bg-gradient-to-br from-white to-yellow-50 rounded-3xl p-6 text-left overflow-hidden shadow-lg transition-transform transform hover:-translate-y-2">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-3 rounded-lg bg-amber-100 text-amber-700 w-12 h-12 flex items-center justify-center">🍽️</div>
+                <div>
+                  <h3 className="text-lg font-semibold">Vendor Terverifikasi</h3>
+                  <p className="text-sm text-gray-600">Semua vendor lewat seleksi kualitas dan layanan.</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">Kami verifikasi keandalan vendor supaya eventmu berjalan lancar tanpa kejutan.</p>
+              <div className="text-sm font-medium text-amber-600">Cocok untuk acara skala kecil → besar</div>
+              <div className="absolute -right-8 -top-8 opacity-20">
+                <svg width="140" height="140" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="32" r="28" fill="#FDE68A" />
+                </svg>
+              </div>
+            </div>
 
-  {/* CARD 1 */}
-  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
-    <img 
-      src="/vendor.png" 
-      alt="Vendor"
-      className="w-full h-40 object-cover rounded-xl mb-4"
-    />
-    <h3 className="text-lg font-semibold">Vendor Terverifikasi</h3>
-    <p className="text-sm text-gray-600">
-      Vendor telah melalui proses seleksi untuk menjamin kualitas dan profesionalitas.
-    </p>
-  </div>
+            <div className="relative bg-gradient-to-br from-white to-yellow-50 rounded-3xl p-6 text-left overflow-hidden shadow-lg transition-transform transform hover:-translate-y-2">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-3 rounded-lg bg-amber-100 text-amber-700 w-12 h-12 flex items-center justify-center">📍</div>
+                <div>
+                  <h3 className="text-lg font-semibold">Dekat dengan Kampus</h3>
+                  <p className="text-sm text-gray-600">Vendor berfokus di area kampus, cepat dan hemat waktu.</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">Pilihan lokasi optimal meminimalisir ongkos kirim dan waktu tunggu.</p>
+              <div className="text-sm font-medium text-amber-600">Akses mudah untuk panitia kampus</div>
+              <div className="absolute -left-8 -bottom-8 opacity-20">
+                <svg width="140" height="140" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="6" width="52" height="52" rx="10" fill="#FFF7ED" />
+                </svg>
+              </div>
+            </div>
 
-  {/* CARD 2 */}
-  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
-    <img 
-      src="/kampus.png" 
-      alt="Kampus"
-      className="w-full h-40 object-cover rounded-xl mb-4"
-    />
-    <h3 className="text-lg font-semibold">Sekitar Kampus</h3>
-    <p className="text-sm text-gray-600">
-      Fokus vendor di area kampus agar mudah diakses dan cepat dihubungi.
-    </p>
-  </div>
+            <div className="relative bg-gradient-to-br from-white to-yellow-50 rounded-3xl p-6 text-left overflow-hidden shadow-lg transition-transform transform hover:-translate-y-2">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-3 rounded-lg bg-amber-100 text-amber-700 w-12 h-12 flex items-center justify-center">💸</div>
+                <div>
+                  <h3 className="text-lg font-semibold">Harga Ramah Mahasiswa</h3>
+                  <p className="text-sm text-gray-600">Paket dan diskon khusus untuk organisasi mahasiswa.</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">Negosiasi paket, diskon kuantitas, dan opsi cicilan untuk event besar.</p>
+              <div className="text-sm font-medium text-amber-600">Hemat anggaran, tetap berkualitas</div>
+              <div className="absolute right-2 top-2 opacity-10">
+                <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 32h48" stroke="#FDE68A" strokeWidth="6" strokeLinecap="round" />
+                </svg>
+              </div>
+            </div>
 
-  {/* CARD 3 */}
-  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
-    <img 
-      src="/harga.png" 
-      alt="Harga"
-      className="w-full h-40 object-cover rounded-xl mb-4"
-    />
-    <h3 className="text-lg font-semibold">Harga Mahasiswa</h3>
-    <p className="text-sm text-gray-600">
-      Paket khusus organisasi dan pembelian dalam jumlah besar.
-    </p>
-  </div>
+            <div className="relative bg-gradient-to-br from-white to-yellow-50 rounded-3xl p-6 text-left overflow-hidden shadow-lg transition-transform transform hover:-translate-y-2">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-3 rounded-lg bg-amber-100 text-amber-700 w-12 h-12 flex items-center justify-center">💬</div>
+                <div>
+                  <h3 className="text-lg font-semibold">Hubungi Langsung</h3>
+                  <p className="text-sm text-gray-600">Chat langsung ke vendor, cepat atur konfirmasi dan detail.</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">Integrasi kontak langsung mempercepat komunikasi tanpa perlu platform tambahan.</p>
+              <div className="text-sm font-medium text-amber-600">Praktis dan efisien</div>
+              <div className="absolute -right-8 -top-8 opacity-10">
+                <svg width="120" height="120" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="32" r="28" fill="#FFF7ED" />
+                </svg>
+              </div>
+            </div>
 
-  {/* CARD 4 */}
-  <div className="bg-white rounded-2xl shadow-md p-4 text-center hover:scale-105 transition">
-    <img 
-      src="/wa.png" 
-      alt="WA"
-      className="w-full h-40 object-cover rounded-xl mb-4"
-    />
-    <h3 className="text-lg font-semibold">Terhubung Langsung</h3>
-    <p className="text-sm text-gray-600">
-      Langsung chat vendor via WhatsApp tanpa ribet.
-    </p>
-  </div>
-
-</div>
+          </div>
         </div>
       </section>
 
