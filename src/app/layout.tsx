@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import FloatingButtons from "../components/FloatingButtons";
 const inter = Inter({ subsets: ["latin"] });
 import "swiper/css";
 export const metadata: Metadata = {
@@ -24,7 +23,6 @@ export default function RootLayout({
         <main>{children}</main>
 
         <Footer />
-        <FloatingButtons />
       </body>
     </html>
   );

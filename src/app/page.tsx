@@ -20,44 +20,55 @@ export default function Home() {
   return (
     <div className="space-y-24">
 
-      {/* ================= HERO ================= */}
-      <section className="relative h-[500px] overflow-hidden">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-        >
-          <source src="/video.mp4" type="video/mp4" />
-        </video>
+      <section className="relative w-full h-[350px] md:h-[650px] overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/60 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-white text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Solusi Vendor untuk <br /> Event & Dana Usaha Kampus
-          </h1>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+    <source src="about_us.mp4" type="video/mp4" />
+  </video>
 
-          <p className="text-gray-200 mb-8 max-w-2xl text-lg">
-            Temukan makanan, minuman, merchandise, dokumentasi, hingga perlengkapan event 
-            untuk kebutuhan organisasi kampusmu dalam satu platform.
-          </p>
+  <div className="absolute inset-0 bg-black/50" />
 
-          <div className="flex gap-4 flex-wrap justify-center">
-            <Link
-              href="#kategori"
-              className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-            >
-              Jelajahi Vendor
-            </Link>
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-            <Link
-              href="/daftar-jadi-vendor"
-              className="bg-yellow-500 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition"
-            >
-              Daftar Jadi Vendor
-            </Link>
-          </div>
-        </div>
-      </section>
+    <span className="bg-amber-500 text-white px-5 py-2 rounded-full text-sm font-semibold mb-6">
+      VenKampus
+    </span>
+
+    <h1 className="text-white text-4xl md:text-7xl font-bold leading-tight max-w-5xl">
+      Solusi Vendor untuk
+      <br />
+      Event & Dana Usaha Kampus
+    </h1>
+
+    <p className="text-gray-200 mt-6 mb-8 max-w-3xl text-lg md:text-xl">
+      Temukan makanan, minuman, merchandise, dokumentasi,
+      hingga perlengkapan event untuk kebutuhan organisasi kampusmu.
+    </p>
+
+    <div className="flex gap-4 flex-wrap justify-center">
+      <Link
+        href="#kategori"
+        className="bg-white text-black px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition"
+      >
+        Jelajahi Vendor
+      </Link>
+
+      <Link
+        href="/daftar-jadi-vendor"
+        className="bg-amber-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-amber-600 transition"
+      >
+        Daftar Jadi Vendor
+      </Link>
+    </div>
+
+  </div>
+</section>
 
       {/* ================= STATS ================= */}
       <section className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
